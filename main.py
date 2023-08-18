@@ -82,9 +82,8 @@ def main():
 
         cv2.putText(img, str(fps), (10, 70), cv2.FONT_HERSHEY_PLAIN, 3, (0, 255, 0), 4)
         cv2.imshow('Subway Surfers', img)
-        cv2.waitKey(1)
-
-
+        if cv2.waitKey(1) & 0xFF == ord('q'):
+            break
 
 
 if __name__ == '__main__':
